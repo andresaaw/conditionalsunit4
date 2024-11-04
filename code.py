@@ -1,13 +1,16 @@
 password = "nothing"
 special = -1
 while len(password) < 8 or special == -1:
-    print("You password must follow the criteria:\nAt least 8 characters\nAt least 1 special character")
+    print("You password must follow the criteria:\nAt least 8 characters\nAt least 1 exclamtion mark")
     password = input("Create a password: ")
-    if len(password) < 8:
-        print("You password must have at least 8 characters.")
 
     special = password.find('!')
-    if special == -1:
-        print("You must have a special character in you password.")
+    if special != -1:
+        if len(password) >= 8:
+            print("Your password has been validated.")
+            exit
+        else:
+            print("Your password requires to be longer than 8 characters.")
+    elif special == -1:
+        print("Your password requires a exclamation mark.")
 
-print("Your password has been successfully validated.")
