@@ -9,5 +9,5 @@ while len(password) < 8 or special == -1:
     special = password.find('!')
     if special == -1:
         print("You must have a special character in you password.")
-    
+
 print("Your password has been successfully validated.")
