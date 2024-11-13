@@ -1,3 +1,8 @@
+# Password Validator
+# Alpha Version 1.0
+# Coder: Andres
+# Date: 2024-11-03
+
 password = "nothing"
 special = -1
 while len(password) < 8 or special == -1:
